@@ -4,6 +4,31 @@
 
 <svelte:head>
 	<title>Pavlos - A marketplace for all tasks that require intelligence</title>
+	<!-- Preload hero image -->
+	<link rel="preload" href="/hero.avif" as="image" />
+
+	<!-- Preload main fonts -->
+	<link
+		rel="preload"
+		href="/fonts/TestSöhne/TestSöhne-Buch.otf"
+		as="font"
+		type="font/otf"
+		crossorigin
+	/>
+	<link
+		rel="preload"
+		href="/fonts/TestSöhne/TestSöhne-Halbfett.otf"
+		as="font"
+		type="font/otf"
+		crossorigin
+	/>
+	<link
+		rel="preload"
+		href="/fonts/TestTiemposText/TestTiemposText-Regular.otf"
+		as="font"
+		type="font/otf"
+		crossorigin
+	/>
 </svelte:head>
 
 <main>

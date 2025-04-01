@@ -241,22 +241,6 @@
 		margin-left: 10px;
 	}
 
-	/* Responsive styles */
-	@media (min-width: 1440px) {
-		.hero-content {
-			max-width: 1400px;
-			padding: 0 40px;
-		}
-
-		.hero-image {
-			width: 45%;
-		}
-
-		.container {
-			padding: 0 80px;
-		}
-	}
-
 	@media (min-width: 1800px) {
 		.hero-content {
 			max-width: 1600px;

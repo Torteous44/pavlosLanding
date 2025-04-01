@@ -1,6 +1,6 @@
 <script>
 	// Inline CSS using Svelte style block
-	import { optimizeImage } from '$lib/image.js';
+	// Remove the image optimization import for now
 </script>
 
 <svelte:head>
@@ -55,12 +55,7 @@
 				</a>
 			</div>
 			<div class="hero-image">
-				<img
-					src="/hero.avif"
-					srcset={optimizeImage('/hero.avif', [640, 1080, 1920, 2560])}
-					sizes="(max-width: 768px) 100vw, 50vw"
-					alt="Pavlos Network"
-				/>
+				<img src="/hero.avif" alt="Pavlos Network" />
 			</div>
 		</div>
 	</section>
@@ -213,12 +208,23 @@
 		display: flex;
 		justify-content: flex-end;
 		z-index: 1;
+		overflow: visible;
 	}
 
 	.hero-image img {
 		max-width: 100%;
 		height: auto;
 		min-width: 725px;
+		display: block;
+		object-fit: contain;
+		object-position: right center;
+	}
+
+	/* Force AVIF images to display properly */
+	@supports (image-format: avif) {
+		.hero-image img {
+			object-fit: contain;
+		}
 	}
 
 	.btn-primary {

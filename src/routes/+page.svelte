@@ -1,5 +1,6 @@
 <script>
 	// Inline CSS using Svelte style block
+	import { optimizeImage } from '$lib/image.js';
 </script>
 
 <svelte:head>
@@ -54,7 +55,12 @@
 				</a>
 			</div>
 			<div class="hero-image">
-				<img src="/hero.avif" alt="Pavlos Network" />
+				<img
+					src="/hero.avif"
+					srcset={optimizeImage('/hero.avif', [640, 1080, 1920, 2560])}
+					sizes="(max-width: 768px) 100vw, 50vw"
+					alt="Pavlos Network"
+				/>
 			</div>
 		</div>
 	</section>

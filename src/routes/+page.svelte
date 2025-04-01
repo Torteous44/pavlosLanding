@@ -118,8 +118,9 @@
 
 <style>
 	main {
-		max-width: 100%;
+		max-width: 100vw;
 		overflow-x: hidden;
+		position: relative;
 	}
 
 	.container {
@@ -127,6 +128,8 @@
 		margin-left: auto;
 		margin-right: auto;
 		padding: 0 20px;
+		width: 100%;
+		box-sizing: border-box;
 	}
 
 	h1 {
@@ -191,18 +194,18 @@
 
 	.hero-image {
 		position: relative;
-		right: -175px;
+		right: 0;
 		width: 50%;
 		display: flex;
 		justify-content: flex-end;
 		z-index: 1;
-		overflow: visible;
+		overflow: hidden;
 	}
 
 	.hero-image img {
 		max-width: 100%;
 		height: auto;
-		min-width: 725px;
+		width: 100%;
 		display: block;
 		object-fit: contain;
 		object-position: right center;
@@ -241,15 +244,10 @@
 		margin-left: 10px;
 	}
 
-	@media (min-width: 1800px) {
+	@media (min-width: 1440px) {
 		.hero-content {
-			max-width: 1600px;
-			padding: 0 60px;
-		}
-
-		.container {
 			max-width: 1400px;
-			padding: 0 120px;
+			padding: 0 40px;
 		}
 	}
 
